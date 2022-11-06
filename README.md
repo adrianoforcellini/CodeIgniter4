@@ -12,7 +12,14 @@ Agora, criaremos o banco de dados que e a tabela que  serão utilizados:
 
 CREATE DATABASE blue_logic;
 USE blue_logic;
-CREATE TABLE users ( name VARCHAR(50) username VARCHAR(50),lastname VARCHAR(50),email VARCHAR(50));
 
-
-
+CREATE TABLE users (
+     id int AUTO_INCREMENT,
+     name VARCHAR(50),
+     username VARCHAR(50),
+     lastname VARCHAR(50),
+     email VARCHAR(50),
+     PRIMARY KEY (id),
+     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ,
+     updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+     ); 

@@ -19,6 +19,7 @@
 
 <body>
     <div class="container mt-5">
+    <?php echo anchor(base_url('users/create'), 'Novo Usuário', 'class="btn btn-secondary"');?>
         <table class="table">
             <tr>
                 <th>
