@@ -1,4 +1,4 @@
-Primeiro passo para usar a aplicação:
+## Como utilizar a aplicação:
 - Criar o usuário no MYSQL ( caso não o tenha )
 - Após entrar no terminal MYSQL, utilize os seguintes comandos:
 
