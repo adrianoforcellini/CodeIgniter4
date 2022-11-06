@@ -33,10 +33,15 @@ class Users extends BaseController
 
     public function store()
     {
-        if ($this -> userModel -> save($this->request->getPost())) {
+        if ($this->userModel->save($this->request->getPost())) {
             return view("messages", ['message' => 'Usuário Salvo com Sucesso']);
         } else {
             echo 'Ocorreu um erro.';
         }
+    }
+
+    public function edit($id)
+    {
+        return view('form', ['user' => $this->userModel->find($id)]);
     }
 }

@@ -17,28 +17,54 @@
             <div class="form-group row">
                 <label for="name" class="col-sm-2 col-form-label">Nome</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" name="name" id="name">
+                    <input 
+                    type=text 
+                    class=form-control
+                    name=name
+                    id=name
+                    value="<?php echo isset($user) ? $user['name'] : ""?>"
+                    >
                 </div>
             </div>
             <div class="form-group row mt-5 ">
                 <label for="username" class="col-sm-2 col-form-label">Username</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" name="username" id="username">
+                <input 
+                    type=text 
+                    class=form-control
+                    name=username
+                    id=username
+                    value="<?php echo isset($user) ? $user['username'] : ""?>"
+                    >                
                 </div>
             </div>
             <div class="form-group row mt-5 ">
                 <label for="lastname" class="col-sm-2 col-form-label">Lastname</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" name="lastname" id="lastname">
+                <input 
+                    type=text 
+                    class=form-control
+                    name=lastname
+                    id=lastname
+                    value="<?php echo isset($user) ? $user['lastname'] : ""?>"
+                    >                
                 </div>
             </div>
             <div class="form-group row mt-5 ">
                 <label for="email" class="col-sm-2 col-form-label">Email</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" name="email" id="email">
+                <input 
+                    type=text 
+                    class=form-control
+                    name=email
+                    id=email
+                    value="<?php echo isset($user) ? $user['email'] : ""?>"
+                    >
                 </div>
             </div>
             <input type="submit" value="Salvar" class="btn btn-secondary mt-5">
+            <input type="hidden" name="id" value="<?php echo isset($user) ? $user['id'] : ""?>">
+
         </form>
         <?php echo form_close(); ?>
 
