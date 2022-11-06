@@ -7,12 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <title>Users</title>
+    <script>
+        function sureToDelete() {
+            if (!confirm("Deseja exluir o registro?")) {
+                return false
+            }
+            return true
+        }
+    </script>
 </head>
 
 <body>
     <div class="container mt-5">
-        <table>
-
+        <table class="table">
             <tr>
                 <th>
                     ID
@@ -40,14 +47,13 @@
                     <td><?php echo $user['username'] ?></td>
                     <td><?php echo $user['lastname'] ?></td>
                     <td><?php echo $user['email'] ?></td>
-                    <td>Ações</td>
+                    <td><?php echo anchor('users/edit/' . $user['id'], 'Editar') ?></td>
+                    <td><?php echo anchor('users/delete/' . $user['id'], 'Excluir', ['onclick' => 'return sureToDelete()']) ?></td>
 
                 </tr>
             <?php endforeach ?>
         </table>
-
     </div>
-
 </body>
 
 </html>
