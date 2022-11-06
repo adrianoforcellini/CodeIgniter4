@@ -20,9 +20,13 @@
 <body>
     <div class="container mt-5">
         <div class="alert alert-info">
-            <?php echo $message; ?>
-        </table>
-    </div>
+            <h3>
+                <?php echo $message; ?>
+            </h3>
+            <p>
+                <?php echo anchor(base_url('/users'), 'Voltar á Tabela.'); ?>
+            </p>
+        </div>
 </body>
 
 </html>

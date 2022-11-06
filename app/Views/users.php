@@ -19,8 +19,8 @@
 
 <body>
     <div class="container mt-5">
-    <?php echo anchor(base_url('users/create'), 'Novo Usuário', 'class="btn btn-secondary"');?>
-        <table class="table">
+        <?php echo anchor(base_url('users/create'), 'Novo Usuário', 'class="btn btn-secondary mb-5"'); ?>
+        <table class="table  table-responsive" >
             <tr>
                 <th>
                     ID
@@ -48,8 +48,8 @@
                     <td><?php echo $user['username'] ?></td>
                     <td><?php echo $user['lastname'] ?></td>
                     <td><?php echo $user['email'] ?></td>
-                    <td><?php echo anchor('users/edit/' . $user['id'], 'Editar') ?></td>
-                    <td><?php echo anchor('users/delete/' . $user['id'], 'Excluir', ['onclick' => 'return sureToDelete()']) ?></td>
+                    <td > <?php echo anchor('users/edit/' . $user['id'], 'Editar', 'class="btn btn-secondary btn-sm"') ?>
+                        <?php echo anchor('users/delete/' . $user['id'], 'Excluir', ['onclick' => 'return sureToDelete()', 'class'  =>  "btn btn-secondary btn-sm"]) ?></td>
 
                 </tr>
             <?php endforeach ?>
